@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{%block title%}
+  Encrypt
+{%endblock%}
+
+{% block main %}
+
+  <form action="/encrypt" method="post">
+    <div class="form-group">
+      <input type="text" name="a" placeholder="Message for encryption" required="required" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="b" placeholder="Key" required="required" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Encode</button>
+
+    <br>
+    <br>
+    <div class="column">
+      <img src="/static/grid_letters.png" alt="Meme #1" style="width:70%">
+    </div>
+
+  </form>
+
+{% endblock %}
